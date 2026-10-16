@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prompt Adventure</title>
+  <meta name="description" content="A simple text‑based adventure game that runs in the browser. Explore a mysterious forest by typing commands." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay"></div>
+  <main class="game-container">
+    <div id="hud" class="hud"></div>
+    <h1 class="title">🌲 Prompt Adventure 🌲</h1>
+    <div id="output" class="output" aria-live="polite"></div>
+    <form id="commandForm" class="command-form" autocomplete="off">
+      <label for="commandInput" class="visually-hidden">Enter command</label>
+      <input type="text" id="commandInput" name="command" placeholder="What will you do?" autofocus />
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

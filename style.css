@@ -1,0 +1,92 @@
+/* style.css - Elegant glassmorphic UI for Prompt Adventure */
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #1e1e2f, #2a2a3c);
+  color: #e0e0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background image (place your generated image in assets/background.jpg) */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('assets/background.jpg') center/cover no-repeat;
+  filter: brightness(0.4) blur(2px);
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30,30,45,0.6);
+  backdrop-filter: blur(4px);
+  z-index: -1;
+}
+
+.game-container {
+  max-width: 600px;
+  width: 90%;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  backdrop-filter: blur(8px);
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.output {
+  min-height: 200px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: rgba(0,0,0,0.2);
+  border-radius: 8px;
+  overflow-y: auto;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.command-form input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.command-form input:focus {
+  background: rgba(255,255,255,0.25);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
